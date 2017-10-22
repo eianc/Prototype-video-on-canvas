@@ -1,0 +1,128 @@
+// --------------------------------------------------------------------------
+// Core
+// --------------------------------------------------------------------------
+// Author:      Mike Simmonds
+// URL:         http://zonedigital.com
+// Copyright:   Copyright (c) 2017, zonedigital.com. All rights reserved.
+// Version:     4
+// --------------------------------------------------------------------------
+
+@import 'utilities/reset';
+
+body {
+    color: #111;
+    font-family: 'Helvetica Neue', sans-serif;
+    line-height: 1.4;
+}
+
+a {
+    background-color: #eee;
+    border-radius: .2rem;
+    color: #555;
+    display: inline-block;
+    padding: 0 .25rem;
+    text-decoration: none;
+    transition: all .2s;
+
+    &:hover,
+    &:active {
+        background-color: #424297;
+        color: #fff;
+    }
+}
+
+p + p {
+    margin-top: .5rem;
+}
+
+.demo {
+    box-sizing: border-box;
+    margin: 2rem auto;
+    max-width: 32rem;
+    padding: 1rem;
+
+    &__logo {
+        display: block;
+        height: 100px;
+        margin: 1rem auto;
+        width: 100px;
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 300;
+        margin: 3rem 0 .5rem;
+        text-align: center;
+    }
+
+    &__modules {
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: row wrap;
+        margin: 0 -.5rem;
+    }
+
+    &__module {
+        box-sizing: border-box;
+        display: flex;
+        padding: .5rem;
+        width: 100%;
+
+        @media (min-width: 32rem) {
+            min-height: 10rem;
+            width: 50%;
+        }
+    }
+
+    &__footer {
+        color: #999;
+        font-size: .9rem;
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
+
+.module {
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: .3rem;
+    box-sizing: border-box;
+    display: flex;
+    padding: 1rem;
+    width: 100%;
+
+    @media (min-width: 32rem) {
+        flex-direction: column;
+    }
+
+    &__logo {
+        display: block;
+        height: auto;
+        margin-right: 1.25rem;
+        width: 3rem;
+
+        @media (min-width: 32rem) {
+            max-height: 4rem;
+            margin: .5rem 0 1.25rem;
+            width: auto;
+        }
+    }
+
+    &__name {
+        font-weight: bold;
+        margin-bottom: .25rem;
+    }
+
+    &__description {
+        color: #999;
+        font-size: .9rem;
+    }
+
+    &__copy {
+        flex: 1;
+
+        @media (min-width: 32rem) {
+            text-align: center;
+        }
+    }
+}
